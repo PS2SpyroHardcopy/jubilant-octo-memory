@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>hvfb2536</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div id="destiny-app">
+  <div v-for="c in cards" :class="{card:true,blue: c.color == 'blue',yellow: c.color == 'yellow', red: c.color == 'red'}">
+     <img v-bind:src=c.img> 
+    <div v-bind:class="{name:true}">{{c.name}}</div>
+    <div v-bind:class="{affl:true,villain:c.affl == 'villain',hero:c.affl == 'hero'}">{{c.affl}}</div>
+    <div v-bind:class="{health:true}">{{c.health}}</div>
+    <div :class="{rare:c.rarity ==true,legendary:c.rarity == false,rarityClass:true}">{{c.setNumber}}</div>
+  </div>
+</div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.8/vue.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
